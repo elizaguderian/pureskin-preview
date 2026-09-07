@@ -1090,12 +1090,16 @@
   }
   .before-after{display:grid;grid-template-columns:0.7fr 1fr;gap:40px;align-items:center;margin-bottom:52px;}
   .before-after:last-child{margin-bottom:0;}
-  .before-after img{border-radius:6px;width:100%;box-shadow:0 20px 40px -24px rgba(26,44,20,.3);}
+  .before-after img{border-radius:6px;width:100%;height:auto;max-width:300px;display:block;margin:0 auto;box-shadow:0 20px 40px -24px rgba(26,44,20,.3);}
   .before-after .ba-label{font-family:'Fraunces',serif;font-size:1.3rem;margin-bottom:8px;}
   @media (max-width:860px){
     .gallery-grid{grid-template-columns:1fr 1fr;}
     .gallery-grid figure:first-child{grid-column:1/-1;aspect-ratio:16/9;}
     .before-after{grid-template-columns:1fr;gap:16px;}
+    .before-after img{max-width:260px;}
+  }
+  @media (max-width:480px){
+    .before-after img{max-width:220px;}
   }
   .section-head{max-width:640px;margin-bottom:40px;}
   .section-head h2{font-size:clamp(1.8rem,3vw,2.4rem);margin-top:10px;}
@@ -1380,7 +1384,7 @@
     .info-item{border-left:none;border-top:1px solid var(--line);padding:16px 0;}
     .info-item:first-child{border-top:none;}
     .about-grid{grid-template-columns:1fr;}
-    .about-photo{aspect-ratio:auto;max-height:320px;}
+    .about-photo{max-width:320px;margin:0 auto;}
     .foot-grid{grid-template-columns:1fr 1fr;gap:32px;}
     .foot-grid > :first-child{grid-column:1/-1;}
     .acc-title{font-size:1.05rem;}
